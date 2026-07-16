@@ -239,6 +239,8 @@ h3 {
 }
 
 .research-authors,
+.research-presentation,
+.research-related,
 .research-status {
   margin-top: 0.35rem;
   margin-bottom: 0;
@@ -246,6 +248,19 @@ h3 {
   font-size: 0.98rem;
   font-weight: 400;
   line-height: 1.55;
+}
+
+.research-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.research-title-link:hover,
+.research-title-link:focus-visible {
+  color: var(--color-accent-strong);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }
 
 .coauthor-link {
@@ -260,6 +275,67 @@ h3 {
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
+}
+
+.research-related__label {
+  color: var(--color-muted);
+}
+
+.research-related a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.research-related a:hover,
+.research-related a:focus-visible {
+  color: var(--color-accent-strong);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.research-disclosure {
+  margin-top: 0.55rem;
+}
+
+.research-disclosure summary {
+  width: fit-content;
+  color: var(--color-accent);
+  cursor: pointer;
+  font-size: 0.98rem;
+  font-weight: 400;
+  line-height: 1.55;
+  text-decoration: none;
+}
+
+.research-disclosure summary:hover,
+.research-disclosure summary:focus-visible {
+  color: var(--color-accent-strong);
+  text-decoration: none;
+}
+
+.research-disclosure summary:focus-visible {
+  outline: 3px solid var(--color-accent-strong);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.research-disclosure summary::marker {
+  color: var(--color-muted);
+  font-size: 0.8em;
+}
+
+.research-disclosure__body {
+  max-width: 42rem;
+  margin: 0.65rem 0 0;
+  color: var(--color-muted);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.research-disclosure__body p {
+  margin-bottom: 0;
 }
 
 .research-status {
