@@ -1,0 +1,360 @@
+:root {
+  --color-background: #faf7f0;
+  --color-text: #202326;
+  --color-muted: #5f6468;
+  --color-accent: #52677a;
+  --color-accent-strong: #3f5263;
+  --color-rule: #d9d5cc;
+  --font-serif: Charter, "Bitstream Charter", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --content-width: 48rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-weight: 400;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.075em;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--color-accent-strong);
+  text-decoration-thickness: 0.11em;
+}
+
+a:focus-visible {
+  color: var(--color-accent-strong);
+  outline: 3px solid var(--color-accent-strong);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+.site-name {
+  font-family: var(--font-serif);
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.15rem, 6vw, 2.7rem);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  margin-bottom: 1.25rem;
+  font-size: clamp(1.45rem, 4vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h3 {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 10;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  transform: translateY(-200%);
+  background: var(--color-background);
+  color: var(--color-accent-strong);
+  font-weight: 650;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.site-header__inner,
+.page-shell,
+.site-footer__inner {
+  width: min(calc(100% - 2.5rem), var(--content-width));
+  margin-inline: auto;
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.5rem 2.5rem;
+  padding-block: 1.35rem;
+}
+
+.site-name {
+  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-name:hover {
+  color: var(--color-accent-strong);
+  text-decoration: underline;
+  text-decoration-thickness: 0.075em;
+}
+
+.site-nav,
+.professional-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.4rem;
+  font-weight: 500;
+}
+
+.site-nav a {
+  display: inline-block;
+  padding-block: 0.25rem;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--color-accent-strong);
+  text-decoration: underline;
+  text-decoration-thickness: 0.1em;
+  text-underline-offset: 0.35em;
+}
+
+.page-shell {
+  padding-block: clamp(3.75rem, 9vw, 6rem);
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(9rem, 11rem);
+  gap: 2.5rem clamp(2.5rem, 7vw, 5rem);
+  align-items: start;
+}
+
+.position {
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.position span {
+  color: var(--color-muted);
+  font-weight: 450;
+}
+
+.introduction {
+  max-width: 38rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.research-fields {
+  margin-bottom: 1.65rem;
+}
+
+.research-fields p {
+  margin-bottom: 0;
+}
+
+.research-fields__label {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.professional-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+}
+
+.profile__portrait img {
+  width: clamp(9rem, 18vw, 11rem);
+  height: auto;
+  border-radius: 2px;
+}
+
+.content-section,
+.research-section {
+  margin-top: clamp(4.5rem, 10vw, 6.5rem);
+}
+
+.research-item {
+  color: var(--color-text);
+}
+
+.research-item + .research-item {
+  margin-top: 2rem;
+}
+
+.research-authors,
+.research-status {
+  margin-top: 0.35rem;
+  margin-bottom: 0;
+  color: var(--color-muted);
+  font-size: 0.98rem;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.coauthor-link {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.coauthor-link:hover,
+.coauthor-link:focus-visible {
+  color: var(--color-accent-strong);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+
+.research-status {
+  color: var(--color-accent-strong);
+  font-style: normal;
+}
+
+.section-link {
+  margin-top: 1.75rem;
+  margin-bottom: 0;
+}
+
+.research-page > h1 {
+  margin-bottom: 0;
+}
+
+.research-section:first-of-type {
+  margin-top: 3.75rem;
+}
+
+.research-page .research-section {
+  margin-top: clamp(5rem, 11vw, 7rem);
+}
+
+.research-page .research-section:first-of-type {
+  margin-top: 3.75rem;
+}
+
+.research-page .research-section h2 {
+  margin-bottom: 2rem;
+  color: var(--color-accent-strong);
+  font-weight: 600;
+}
+
+.research-page .research-item + .research-item {
+  margin-top: 2.75rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--color-rule);
+}
+
+.site-footer__inner {
+  padding-block: 1.5rem 2rem;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 42rem) {
+  body {
+    font-size: 1rem;
+  }
+
+  .site-header__inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .site-nav {
+    column-gap: 1.2rem;
+  }
+
+  .page-shell {
+    padding-block: 3.5rem 4.5rem;
+  }
+
+  .profile {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .profile__portrait img {
+    width: 9rem;
+  }
+
+  .content-section,
+  .research-section {
+    margin-top: 4.25rem;
+  }
+}
+
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .skip-link {
+    display: none;
+  }
+
+  .site-header,
+  .site-footer,
+  .research-list,
+  .research-item {
+    border-color: #bbb;
+  }
+}
